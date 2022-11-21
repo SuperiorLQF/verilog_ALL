@@ -1,0 +1,42 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 10;
+:vpi_module "E:\IVERILOG\iverilog\lib\ivl\system.vpi";
+:vpi_module "E:\IVERILOG\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "E:\IVERILOG\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "E:\IVERILOG\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "E:\IVERILOG\iverilog\lib\ivl\va_math.vpi";
+S_000001b807a92d40 .scope module, "cmp" "cmp" 2 2;
+ .timescale -9 -10;
+    .port_info 0 /INPUT 1 "Gi";
+    .port_info 1 /INPUT 1 "Ei";
+    .port_info 2 /INPUT 1 "Ai";
+    .port_info 3 /INPUT 1 "Bi";
+    .port_info 4 /OUTPUT 1 "Go";
+    .port_info 5 /OUTPUT 1 "Eo";
+o000001b807ac6f88 .functor BUFZ 1, C4<z>; HiZ drive
+o000001b807ac6fb8 .functor BUFZ 1, C4<z>; HiZ drive
+L_000001b807a93150 .functor XNOR 1, o000001b807ac6f88, o000001b807ac6fb8, C4<0>, C4<0>;
+o000001b807ac6fe8 .functor BUFZ 1, C4<z>; HiZ drive
+L_000001b807a935e0 .functor AND 1, o000001b807ac6fe8, L_000001b807a93150, C4<1>, C4<1>;
+L_000001b807a933a0 .functor XNOR 1, o000001b807ac6f88, o000001b807ac6fb8, C4<0>, C4<0>;
+o000001b807ac7048 .functor BUFZ 1, C4<z>; HiZ drive
+L_000001b80782e4d0 .functor AND 1, L_000001b807a933a0, o000001b807ac7048, C4<1>, C4<1>;
+L_000001b80782e540 .functor OR 1, L_000001b80782e430, L_000001b80782e4d0, C4<0>, C4<0>;
+v000001b807a92ed0_0 .net "Ai", 0 0, o000001b807ac6f88;  0 drivers
+v000001b807a92f70_0 .net "Bi", 0 0, o000001b807ac6fb8;  0 drivers
+v000001b807a93010_0 .net "Ei", 0 0, o000001b807ac6fe8;  0 drivers
+v000001b807a930b0_0 .net "Eo", 0 0, L_000001b807a935e0;  1 drivers
+v000001b80782dfe0_0 .net "Gi", 0 0, o000001b807ac7048;  0 drivers
+v000001b80782e080_0 .net "Go", 0 0, L_000001b80782e540;  1 drivers
+v000001b80782e120_0 .net *"_ivl_0", 0 0, L_000001b807a93150;  1 drivers
+v000001b80782e1c0_0 .net *"_ivl_4", 0 0, L_000001b80782e430;  1 drivers
+v000001b80782e260_0 .net *"_ivl_6", 0 0, L_000001b807a933a0;  1 drivers
+v000001b80782e390_0 .net *"_ivl_9", 0 0, L_000001b80782e4d0;  1 drivers
+L_000001b80782e430 .cmp/gt 1, o000001b807ac6f88, o000001b807ac6fb8;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "compare_1bit.v";
