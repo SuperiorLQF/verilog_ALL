@@ -1,4 +1,7 @@
 # <font color=red>verilog_ALL</font>
+```
+git config --global http.proxy "127.0.0.1:7890"
+```
 这里收集了verilog入门的基本知识和练习
 
 ***
