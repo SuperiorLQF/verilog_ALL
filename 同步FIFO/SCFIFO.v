@@ -39,14 +39,14 @@ memory memory1
 always @(posedge clk or negedge reset_n) begin//读
     if(~reset_n)
         rd_addr<='b0;
-    else if(~rd)begin//可读
+    else if(~rd&&~empty)begin//可读
         rd_addr<=rd_addr+1'b1;
     end   
 end
 always @(posedge clk or negedge reset_n) begin//写
     if(~reset_n)
         wr_addr<='b0;
-    else if(~wr)begin//可写
+    else if(~wr&&~full)begin//可写
         wr_addr<=wr_addr+1'b1;
     end    
 end
