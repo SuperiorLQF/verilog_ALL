@@ -42,12 +42,13 @@ always @(posedge clk_i or negedge rstn_i) begin
         for(i=4;i<6;i=i+1)begin
             Register[i]<=STATE_REG_DEFAULT;
         end
+        cmd_data_o<='d0;//!!!不加这句不给综合
     end
     else begin
         case (cmd_i)
         //!!!这里没有加入状态寄存器不能写的约束，所有寄存器均可读写，并且读取的通道余量是延迟一个时钟的
-            01:Register[cmd_addr_i>>4]<=cmd_data_i;//RD
-            10:cmd_data_o<=Register[cmd_addr_i>>4];//WR
+            'b01:cmd_data_o<=Register[cmd_addr_i>>4];//RD
+            'b10:Register[cmd_addr_i>>4]<=cmd_data_i;//WR
             default: //IDLE
                 ;//不做任何操作但是要加上，防止综合出锁存器
         endcase
