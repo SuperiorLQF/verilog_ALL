@@ -19,7 +19,7 @@ module  slave_FIFO
     output  wire    [5:0]   margin_o,       //本通道FIFO余量
     output  wire    [31:0]  slvx_data_o,    //发送给仲裁器的数据
     output  reg             slvx_val_o,     //发送给仲裁器的数据有效
-    output  wire            slvx_req_o      //数据包发送请求!!!待实现
+    output  wire            slvx_req_o      
 
 );
 /*************************<中间信号>*********************/
