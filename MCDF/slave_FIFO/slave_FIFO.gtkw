@@ -1,0 +1,50 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Sat Dec  3 13:42:54 2022
+[*]
+[dumpfile] "/home/lqf/桌面/Verilog_ALL/verilog_ALL/MCDF/slave_FIFO/slave_FIFO.vcd"
+[dumpfile_mtime] "Sat Dec  3 13:33:54 2022"
+[dumpfile_size] 13263
+[savefile] "/home/lqf/桌面/Verilog_ALL/verilog_ALL/MCDF/slave_FIFO/slave_FIFO.gtkw"
+[timestart] 0
+[size] 1846 1016
+[pos] -1 -1
+*-16.000000 25000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] slave_FIFO_tb.
+[sst_width] 233
+[signals_width] 249
+[sst_expanded] 1
+[sst_vpaned_height] 289
+@28
+slave_FIFO_tb.clk_i
+slave_FIFO_tb.rstn_i
+slave_FIFO_tb.chx_valid_i
+[color] 3
+slave_FIFO_tb.a2sx_ack_i
+slave_FIFO_tb.slvx_en_i
+@22
+slave_FIFO_tb.chx_data_i[31:0]
+@28
+slave_FIFO_tb.slvx_pkglen_i[2:0]
+[color] 2
+slave_FIFO_tb.chx_ready_o
+@24
+slave_FIFO_tb.margin_o[5:0]
+@29
+[color] 3
+slave_FIFO_tb.slvx_val_o
+@22
+slave_FIFO_tb.slvx_data_o[31:0]
+@28
+[color] 3
+slave_FIFO_tb.slvx_req_o
+@420
+[color] 7
+slave_FIFO_tb.slave1.i
+@28
+[color] 7
+slave_FIFO_tb.slave1.rd_en
+[color] 7
+slave_FIFO_tb.slave1.wr_en
+[pattern_trace] 1
+[pattern_trace] 0
