@@ -50,7 +50,7 @@ initial begin
     rstn_i=0;
     cmd_i='b00;
     cmd_addr_i='b00;
-    cmd_data_i='hC3;  
+    cmd_data_i='h00;  
     slv0_margin_i='d21;
     slv1_margin_i='d33;
     slv2_margin_i='d45;    
@@ -58,43 +58,43 @@ initial begin
     $dumpvars;
     #25 rstn_i=1;
     @(posedge clk_i)begin
-        cmd_i='b10;
-        cmd_addr_i='d00;
-        cmd_data_i='hD1;     
+        cmd_i<='b10;
+        cmd_addr_i<='d00;//特别注意要非阻塞赋值
+        cmd_data_i<='hD1;     
     end
     @(posedge clk_i)begin
-        cmd_i='b10;
-        cmd_addr_i='d04;
-        cmd_data_i='hD2;     
+        cmd_i<='b10;
+        cmd_addr_i<='d04;
+        cmd_data_i<='hD2;     
     end
     @(posedge clk_i)begin
-        cmd_i='b10;
-        cmd_addr_i='d08;
-        cmd_data_i='hD3;     
+        cmd_i<='b10;
+        cmd_addr_i<='d08;
+        cmd_data_i<='hD3;     
     end
     @(posedge clk_i)begin
-        cmd_i='b00;
-        cmd_addr_i='d08;
-        cmd_data_i='hD3;     
+        cmd_i<='b00;
+        cmd_addr_i<='d08;
+        cmd_data_i<='hD3;     
     end
     @(posedge clk_i)begin
-        cmd_i='b10;
-        cmd_addr_i='d00;
-        cmd_data_i='hD4;     
+        cmd_i<='b10;
+        cmd_addr_i<='d00;
+        cmd_data_i<='hD4;     
     end
     @(posedge clk_i)begin
-        cmd_i='b01;
-        cmd_addr_i='d04;
-        cmd_data_i='hD4;     
+        cmd_i<='b01;
+        cmd_addr_i<='d04;
+        cmd_data_i<='hD4;     
     end
     @(posedge clk_i)begin
-        cmd_i='b01;
-        cmd_addr_i='d00;
-        cmd_data_i='hD4;     
+        cmd_i<='b01;
+        cmd_addr_i<='d00;
+        cmd_data_i<='hD4;     
     end
     #500 $finish;
 end
 always #10
-    clk_i=~clk_i;
+    clk_i<=~clk_i;
 
 endmodule

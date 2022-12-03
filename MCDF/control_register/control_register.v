@@ -47,15 +47,15 @@ always @(posedge clk_i or negedge rstn_i) begin
     else begin
         case (cmd_i)
         //!!!这里没有加入状态寄存器不能写的约束，所有寄存器均可读写，并且读取的通道余量是延迟一个时钟的
-            'b01:cmd_data_o<=Register[cmd_addr_i>>4];//RD
-            'b10:Register[cmd_addr_i>>4]<=cmd_data_i;//WR
+            2'b01:cmd_data_o<=Register[cmd_addr_i>>2];//RD
+            2'b10:Register[cmd_addr_i>>2]<=cmd_data_i;//WR
             default: //IDLE
                 ;//不做任何操作但是要加上，防止综合出锁存器
         endcase
-        //锁存更新通道余量
-        Register[0][5:3]<=slv0_margin_i;
-        Register[1][5:3]<=slv1_margin_i;
-        Register[2][5:3]<=slv2_margin_i;        
+        //!!!锁存更新通道余量,不是实时的，会延迟一个始终
+        Register[3][5:3]<=slv0_margin_i;
+        Register[4][5:3]<=slv1_margin_i;
+        Register[5][5:3]<=slv2_margin_i;        
     end
 end
 /*************************<组合逻辑电路>*********************/
