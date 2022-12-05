@@ -1,0 +1,38 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Mon Dec  5 15:31:32 2022
+[*]
+[dumpfile] "/home/lqf/桌面/Verilog_ALL/verilog_ALL/MCDF/formatter/seq_ref.vcd"
+[dumpfile_mtime] "Mon Dec  5 15:26:35 2022"
+[dumpfile_size] 1372
+[savefile] "/home/lqf/桌面/Verilog_ALL/verilog_ALL/MCDF/formatter/seq_ref.gtkw"
+[timestart] 0
+[size] 1846 1016
+[pos] -924 -1
+*-16.000000 30400 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 233
+[signals_width] 142
+[sst_expanded] 1
+[sst_vpaned_height] 289
+@28
+seq_ref.clk_i
+seq_ref.rst_n
+@29
+[color] 2
+seq_ref.fmt_id_req
+@28
+[color] 3
+seq_ref.a2f_id[1:0]
+[color] 2
+seq_ref.fmt_req
+[color] 3
+seq_ref.fmt_grant
+seq_ref.a2sx_ack
+seq_ref.f2a_ack
+@22
+seq_ref.fmt_data[31:0]
+@28
+seq_ref.fmt_strat
+seq_ref.fmt_end
+[pattern_trace] 1
+[pattern_trace] 0
