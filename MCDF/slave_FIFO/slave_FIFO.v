@@ -27,6 +27,7 @@ wire [5:0] pkglen;
 integer i;
 wire    wr_en,
         rd_en,
+        val_i,//i不为0时该信号为1，用于生成rd_en的中间信号
         rst_n;
 assign wr_en=chx_valid_i&chx_ready_o;
 assign chx_ready_o=(margin_o>='d32);//这里比较充裕，可以(margin_o<slvx_pkglen_i)
@@ -51,7 +52,7 @@ always @(posedge clk_i or negedge rst_n) begin//产生输出长度i计数信号
         i<=0;
     else if(a2sx_ack_i==1)
         i<=1;
-    else if(i>0 && i<pkglen)//^^C语言连续不等式是错误的
+    else if(i>0 && i<pkglen-1)//^^C语言连续不等式是错误的
         i<=i+1;
     else
         i<=0;        
@@ -63,18 +64,7 @@ always @(posedge clk_i or negedge rst_n) begin
         slvx_val_o<=rd_en;
 end
 /*************************<组合电路>*********************/
-assign rd_en=(i==0)?0:1;
+assign val_i=(i==0)?0:1;
+assign rd_en=val_i | a2sx_ack_i;
 assign slvx_req_o=(margin_o<=DATA_DEPTH-pkglen)?1:0;//如果FIFO使用量大于一个pkglen，则请求发送
 endmodule
-// always @(posedge clk_i or negedge rst_n) begin//注意连续性，接完一个数据包立马接下一个
-//     if(~rst_n)
-//         j<=0;
-//     else if(j>=pkglen && wr_en==1)
-//         j<=1;
-//     else if(j>=pkglen && wr_en==0)
-//         j<=0;
-//     else if(j< pkglen && wr_en==1)
-//         j<=j+1;
-//     else//j< pkglen && wr_en==0
-//         j<=j;
-// end
