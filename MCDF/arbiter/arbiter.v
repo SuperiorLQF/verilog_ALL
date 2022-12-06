@@ -23,6 +23,10 @@ module arbiter
                             slv0_val_i,
                             slv1_val_i,
                             slv2_val_i,
+                            
+    input   wire            slv0_end_i,           //!!!增加的信号
+    input   wire            slv1_end_i,           //!!!增加的信号
+    input   wire            slv2_end_i,           //!!!增加的信号
 /*******************<formatter 接口>*********************/    
     input   wire            f2a_id_req_i,       //formatter请求接收
                             f2a_ack_i,
@@ -35,7 +39,9 @@ module arbiter
                             a2f_val_o,          //[-slv]slvx_val_i,包有效包络信号
     output  reg     [1:0]   a2f_id_o,           //通道编号
     output  reg     [31:0]  a2f_data_o,         //[-slv]slvx_data_i
-    output  reg     [2:0]   a2f_pkglen_sel_o    //[-slv]slvx_pkglen_i
+    output  reg     [2:0]   a2f_pkglen_sel_o,    //[-slv]slvx_pkglen_i
+
+    output  reg             a2f_end_o           //!!!增加的信号
 );
 /*****************<中间信号>*********************/
 wire    [3:0]   ch0_prio_syn,//各通道综合优先级，计算方法见下
@@ -105,6 +111,8 @@ always @(*) begin
         a2s0_ack_o=f2a_ack_i;
         a2s1_ack_o=0;
         a2s2_ack_o=0;
+
+        a2f_end_o=slv0_end_i;
     end
 
     2'b01:begin
@@ -115,6 +123,8 @@ always @(*) begin
         a2s0_ack_o=0;
         a2s1_ack_o=f2a_ack_i;
         a2s2_ack_o=0;
+
+        a2f_end_o=slv1_end_i;
     end
 
     2'b10:begin
@@ -125,6 +135,8 @@ always @(*) begin
         a2s0_ack_o=0;
         a2s1_ack_o=0;
         a2s2_ack_o=f2a_ack_i;
+
+        a2f_end_o=slv2_end_i;
     end
 
     2'b11:begin//default
@@ -135,6 +147,8 @@ always @(*) begin
         a2s0_ack_o=0;
         a2s1_ack_o=0;
         a2s2_ack_o=0;
+
+        a2f_end_o=0;
     end
     endcase
 end

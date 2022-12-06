@@ -14,7 +14,8 @@ wire            chx_ready_o;
 wire    [5:0]   margin_o;  
 wire    [31:0]  slvx_data_o;  
 wire            slvx_val_o;  
-wire            slvx_req_o;  
+wire            slvx_req_o;
+wire            slvx_end_o;  
 /********************<实例化slave_FIFO>*********************/
 slave_FIFO  slave1(
                 clk_i,       
@@ -29,7 +30,8 @@ slave_FIFO  slave1(
                 margin_o,
                 slvx_data_o,  
                 slvx_val_o, 
-                slvx_req_o  
+                slvx_req_o,
+                slvx_end_o  
 );
 initial begin
     clk_i<=0;//

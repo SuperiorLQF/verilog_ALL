@@ -6,8 +6,8 @@ reg             rst_n;
 reg             fmt_grant;
 wire            a2sx_ack,
                 f2a_ack;//这三个信号为同一个信号，持续至少一个时钟周期，在开始发送后可以降低
-assign  f2a_ack=fmt_grant;
-assign  a2sx_ack=fmt_grant;
+assign  f2a_ack=fmt_grant & fmt_req;
+assign  a2sx_ack=fmt_grant & fmt_req;
 
 reg             fmt_id_req;//formatter空闲时为高
 reg     [1:0]   a2f_id;//就绪通道信号
@@ -33,19 +33,19 @@ initial begin
 @(posedge clk_i)    begin
     a2f_id<=2'b10;
     fmt_req<=1'b1;//表示就绪，等待grant
-end
+end 
 #30
 @(posedge clk_i)    fmt_grant<=1;
 @(posedge clk_i)    begin
     fmt_req<=0;
     fmt_data<=$random;
-    fmt_strat<=1;   
+    fmt_strat<=1;
+    fmt_id_req<=0;    
 end
 @(posedge clk_i)begin
                     fmt_grant<=0;
                     fmt_data<=$random;
                     fmt_strat<=0;
-                    fmt_id_req<=0; 
 end
 @(posedge clk_i)begin
                     fmt_strat<=0;

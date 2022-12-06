@@ -1,6 +1,6 @@
 /*************************<MCDF通道从端>*********************/
 `timescale 1ns/100ps
-`include "SCFIFO.v"
+`include "../SCFIFO/SCFIFO.v"
 /*************************<端口声明>*********************/
 module  slave_FIFO
 #(
@@ -19,8 +19,9 @@ module  slave_FIFO
     output  wire    [5:0]   margin_o,       //本通道FIFO余量
     output  wire    [31:0]  slvx_data_o,    //发送给仲裁器的数据
     output  reg             slvx_val_o,     //发送给仲裁器的数据有效
-    output  wire            slvx_req_o      
+    output  wire            slvx_req_o,      
 
+    output  reg             slvx_end_o     //增加的 
 );
 /*************************<中间信号>*********************/
 wire [5:0] pkglen;
@@ -62,6 +63,15 @@ always @(posedge clk_i or negedge rst_n) begin
         slvx_val_o<=0;
     else
         slvx_val_o<=rd_en;
+end
+
+always @(posedge clk_i or negedge rst_n) begin
+    if(~rst_n)
+        slvx_end_o<=0;
+    else if(i==pkglen-1)
+        slvx_end_o<=1;
+    else
+        slvx_end_o<=0;
 end
 /*************************<组合电路>*********************/
 assign val_i=(i==0)?0:1;

@@ -1,10 +1,10 @@
 [*]
 [*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
-[*] Mon Dec  5 11:36:20 2022
+[*] Tue Dec  6 12:14:23 2022
 [*]
 [dumpfile] "/home/lqf/桌面/Verilog_ALL/verilog_ALL/MCDF/arbiter/arbiter.vcd"
-[dumpfile_mtime] "Mon Dec  5 11:30:43 2022"
-[dumpfile_size] 7304
+[dumpfile_mtime] "Tue Dec  6 12:13:31 2022"
+[dumpfile_size] 7600
 [savefile] "/home/lqf/桌面/Verilog_ALL/verilog_ALL/MCDF/arbiter/arbiter.gtkw"
 [timestart] 0
 [size] 1846 1016
@@ -14,7 +14,7 @@
 [sst_width] 233
 [signals_width] 198
 [sst_expanded] 1
-[sst_vpaned_height] 289
+[sst_vpaned_height] 579
 @28
 arbiter_tb.clk_i
 arbiter_tb.rstn_i
@@ -41,9 +41,7 @@ arbiter_tb.slv2_data_i[31:0]
 @28
 arbiter_tb.f2a_id_req_i
 arbiter_tb.a2s0_ack_o
-@29
 arbiter_tb.a2s1_ack_o
-@28
 arbiter_tb.a2s2_ack_o
 [color] 2
 arbiter_tb.a2f_val_o
@@ -53,5 +51,12 @@ arbiter_tb.a2f_data_o[31:0]
 @28
 arbiter_tb.a2f_pkglen_sel_o[2:0]
 arbiter_tb.ar1.f2a_ack_i
+@29
+[color] 3
+arbiter_tb.a2f_end_o
+@28
+arbiter_tb.slv0_end_i
+arbiter_tb.slv1_end_i
+arbiter_tb.slv2_end_i
 [pattern_trace] 1
 [pattern_trace] 0

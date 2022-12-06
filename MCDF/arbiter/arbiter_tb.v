@@ -20,7 +20,12 @@ reg             slv0_req_i,
                 slv2_req_i,    
                 slv0_val_i,
                 slv1_val_i,
-                slv2_val_i;
+                slv2_val_i,
+                
+                slv0_end_i,
+                slv1_end_i,
+                slv2_end_i;
+
 /********<formatter 接口>*********************/    
 reg             f2a_id_req_i,       //formatter请求接收
                 f2a_ack_i;
@@ -56,6 +61,10 @@ arbiter ar1(
     slv1_val_i,
     slv2_val_i,
 
+    slv0_end_i,
+    slv1_end_i,
+    slv2_end_i,
+
     f2a_id_req_i,   
     f2a_ack_i,
 
@@ -66,12 +75,18 @@ arbiter ar1(
     a2f_val_o,     
     a2f_id_o,       
     a2f_data_o,     
-    a2f_pkglen_sel_o
+    a2f_pkglen_sel_o,
+    
+    a2f_end_o
 );
 initial begin
 /*********<初始化>**********/
     clk_i<=0;
     rstn_i<=0;//
+
+    slv0_end_i<=0;
+    slv1_end_i<=0;
+    slv2_end_i<=0;
 
     slv0_prio_i<=2'b11;//
     slv1_prio_i<=2'b01;//这个是最优先通道
@@ -101,11 +116,13 @@ initial begin
         slv2_req_i<=1;
 @(posedge clk_i)begin
     f2a_id_req_i<=1;//两个短时信号
-end 
+end
+
 @(posedge clk_i)begin
     f2a_id_req_i<=0;
     f2a_ack_i<=1;     
 end
+
 @(posedge clk_i)begin
     f2a_ack_i<=0;     
 end
@@ -120,10 +137,16 @@ end
                 slv2_val_i<=0;                
             end
         end
+        slv0_end_i<=1;
+        slv1_end_i<=1;
+        slv2_end_i<=1; 
 @(posedge clk_i)begin
     slv0_data_i<=$random;
     slv1_data_i<=$random;
     slv2_data_i<=$random;
+    slv0_end_i<=0;
+    slv1_end_i<=0;
+    slv2_end_i<=0; 
     slv0_val_i<=0;
     slv1_val_i<=0;
     slv2_val_i<=0;
