@@ -6,7 +6,7 @@ module formatter
     input   wire            clk_i,
                             rstn_i,
 
-    input   wire            a2f_val_i,
+    input   wire            a2f_val_i,//!!!这个信号没用到，检查是否可以去除
     input   wire    [1:0]   a2f_id_i,
     input   wire    [31:0]  a2f_data_i,
     input   wire    [2:0]   a2f_pkglen_sel_i,
@@ -53,14 +53,12 @@ always @(posedge clk_i or negedge rstn_i) begin
     else
         fmt_id_req_o<=fmt_id_req_o;
 end
-// >>> fmt_start_o
+// >>> fmt_start_o 是f2a_ack_o延迟一个周期
 always @(posedge clk_i or negedge rstn_i) begin
     if(~rstn_i)
         fmt_start_o<=0;
-    else if(fmt_grant_i)
-        fmt_start_o<=1;
     else
-        fmt_start_o<=0;
+        fmt_start_o<=f2a_ack_o;
 end
 /***************<组合电路>*********************/
 // >>>fmt_req_o<<<
