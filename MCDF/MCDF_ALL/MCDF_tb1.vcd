@@ -1,0 +1,953 @@
+$date
+	Wed Dec  7 15:22:37 2022
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module MCDF_tb1 $end
+$var wire 1 ! fmt_start $end
+$var wire 1 " fmt_req $end
+$var wire 6 # fmt_length [5:0] $end
+$var wire 1 $ fmt_end $end
+$var wire 32 % fmt_data [31:0] $end
+$var wire 2 & fmt_child [1:0] $end
+$var wire 32 ' cmd_data_o [31:0] $end
+$var wire 1 ( ch2_ready $end
+$var wire 1 ) ch1_ready $end
+$var wire 1 * ch0_ready $end
+$var reg 32 + ch0_data [31:0] $end
+$var reg 1 , ch0_valid $end
+$var reg 32 - ch1_data [31:0] $end
+$var reg 1 . ch1_valid $end
+$var reg 32 / ch2_data [31:0] $end
+$var reg 1 0 ch2_valid $end
+$var reg 1 1 clk $end
+$var reg 2 2 cmd [1:0] $end
+$var reg 6 3 cmd_addr [5:0] $end
+$var reg 32 4 cmd_data_i [31:0] $end
+$var reg 1 5 fmt_grant $end
+$var reg 1 6 rst_n $end
+$scope module MCDF_inst0 $end
+$var wire 32 7 ch0_data [31:0] $end
+$var wire 1 , ch0_valid $end
+$var wire 32 8 ch1_data [31:0] $end
+$var wire 1 . ch1_valid $end
+$var wire 32 9 ch2_data [31:0] $end
+$var wire 1 0 ch2_valid $end
+$var wire 1 1 clk $end
+$var wire 2 : cmd [1:0] $end
+$var wire 6 ; cmd_addr [5:0] $end
+$var wire 32 < cmd_data_i [31:0] $end
+$var wire 1 5 fmt_grant $end
+$var wire 1 6 rst_n $end
+$var wire 1 = slv2_val $end
+$var wire 1 > slv2_req $end
+$var wire 2 ? slv2_prio [1:0] $end
+$var wire 3 @ slv2_pkglen [2:0] $end
+$var wire 6 A slv2_margin [5:0] $end
+$var wire 1 B slv2_end $end
+$var wire 1 C slv2_en $end
+$var wire 32 D slv2_data [31:0] $end
+$var wire 1 E slv1_val $end
+$var wire 1 F slv1_req $end
+$var wire 2 G slv1_prio [1:0] $end
+$var wire 3 H slv1_pkglen [2:0] $end
+$var wire 6 I slv1_margin [5:0] $end
+$var wire 1 J slv1_end $end
+$var wire 1 K slv1_en $end
+$var wire 32 L slv1_data [31:0] $end
+$var wire 1 M slv0_val $end
+$var wire 1 N slv0_req $end
+$var wire 2 O slv0_prio [1:0] $end
+$var wire 3 P slv0_pkglen [2:0] $end
+$var wire 6 Q slv0_margin [5:0] $end
+$var wire 1 R slv0_end $end
+$var wire 1 S slv0_en $end
+$var wire 32 T slv0_data [31:0] $end
+$var wire 1 ! fmt_start $end
+$var wire 1 " fmt_req $end
+$var wire 6 U fmt_length [5:0] $end
+$var wire 1 $ fmt_end $end
+$var wire 32 V fmt_data [31:0] $end
+$var wire 2 W fmt_child [1:0] $end
+$var wire 1 X f2a_id_req $end
+$var wire 1 Y f2a_ack $end
+$var wire 32 Z cmd_data_o [31:0] $end
+$var wire 1 ( ch2_ready $end
+$var wire 1 ) ch1_ready $end
+$var wire 1 * ch0_ready $end
+$var wire 1 [ a2s2_ack $end
+$var wire 1 \ a2s1_ack $end
+$var wire 1 ] a2s0_ack $end
+$var wire 1 ^ a2f_val $end
+$var wire 3 _ a2f_pkglen_sel [2:0] $end
+$var wire 2 ` a2f_id [1:0] $end
+$var wire 1 a a2f_end $end
+$var wire 32 b a2f_data [31:0] $end
+$scope module arb0 $end
+$var wire 1 1 clk_i $end
+$var wire 1 6 rstn_i $end
+$var wire 3 c slvx_req [2:0] $end
+$var wire 1 = slv2_val_i $end
+$var wire 1 > slv2_req_i $end
+$var wire 2 d slv2_prio_i [1:0] $end
+$var wire 3 e slv2_pkglen_i [2:0] $end
+$var wire 1 B slv2_end_i $end
+$var wire 32 f slv2_data_i [31:0] $end
+$var wire 1 E slv1_val_i $end
+$var wire 1 F slv1_req_i $end
+$var wire 2 g slv1_prio_i [1:0] $end
+$var wire 3 h slv1_pkglen_i [2:0] $end
+$var wire 1 J slv1_end_i $end
+$var wire 32 i slv1_data_i [31:0] $end
+$var wire 1 M slv0_val_i $end
+$var wire 1 N slv0_req_i $end
+$var wire 2 j slv0_prio_i [1:0] $end
+$var wire 3 k slv0_pkglen_i [2:0] $end
+$var wire 1 R slv0_end_i $end
+$var wire 32 l slv0_data_i [31:0] $end
+$var wire 1 X f2a_id_req_i $end
+$var wire 1 Y f2a_ack_i $end
+$var wire 4 m ch2_prio_syn [3:0] $end
+$var wire 4 n ch1_prio_syn [3:0] $end
+$var wire 4 o ch0_prio_syn [3:0] $end
+$var reg 32 p a2f_data_o [31:0] $end
+$var reg 1 a a2f_end_o $end
+$var reg 2 q a2f_id_o [1:0] $end
+$var reg 3 r a2f_pkglen_sel_o [2:0] $end
+$var reg 1 ^ a2f_val_o $end
+$var reg 1 ] a2s0_ack_o $end
+$var reg 1 \ a2s1_ack_o $end
+$var reg 1 [ a2s2_ack_o $end
+$var reg 6 s channel_prio [5:0] $end
+$upscope $end
+$scope module cr0 $end
+$var wire 1 1 clk_i $end
+$var wire 6 t cmd_addr_i [5:0] $end
+$var wire 32 u cmd_data_i [31:0] $end
+$var wire 2 v cmd_i [1:0] $end
+$var wire 1 6 rstn_i $end
+$var wire 2 w slv2_prio_o [1:0] $end
+$var wire 3 x slv2_pkglen_o [2:0] $end
+$var wire 6 y slv2_margin_i [5:0] $end
+$var wire 1 C slv2_en_o $end
+$var wire 2 z slv1_prio_o [1:0] $end
+$var wire 3 { slv1_pkglen_o [2:0] $end
+$var wire 6 | slv1_margin_i [5:0] $end
+$var wire 1 K slv1_en_o $end
+$var wire 2 } slv0_prio_o [1:0] $end
+$var wire 3 ~ slv0_pkglen_o [2:0] $end
+$var wire 6 !" slv0_margin_i [5:0] $end
+$var wire 1 S slv0_en_o $end
+$var reg 32 "" cmd_data_o [31:0] $end
+$var integer 32 #" i [31:0] $end
+$upscope $end
+$scope module fm0 $end
+$var wire 32 $" a2f_data_i [31:0] $end
+$var wire 1 a a2f_end_i $end
+$var wire 2 %" a2f_id_i [1:0] $end
+$var wire 3 &" a2f_pkglen_sel_i [2:0] $end
+$var wire 1 ^ a2f_val_i $end
+$var wire 1 1 clk_i $end
+$var wire 1 Y f2a_ack_o $end
+$var wire 2 '" fmt_child_o [1:0] $end
+$var wire 32 (" fmt_data_o [31:0] $end
+$var wire 1 $ fmt_end_o $end
+$var wire 1 5 fmt_grant_i $end
+$var wire 1 " fmt_req_o $end
+$var wire 1 6 rstn_i $end
+$var reg 1 )" fmt_end_d1 $end
+$var reg 1 X fmt_id_req_o $end
+$var reg 6 *" fmt_length_o [5:0] $end
+$var reg 1 ! fmt_start_o $end
+$upscope $end
+$scope module slave0 $end
+$var wire 1 ] a2sx_ack_i $end
+$var wire 32 +" chx_data_i [31:0] $end
+$var wire 1 , chx_valid_i $end
+$var wire 1 1 clk_i $end
+$var wire 1 ," rd_en $end
+$var wire 1 -" rst_n $end
+$var wire 1 6 rstn_i $end
+$var wire 1 S slvx_en_i $end
+$var wire 3 ." slvx_pkglen_i [2:0] $end
+$var wire 1 /" wr_en $end
+$var wire 1 0" val_i $end
+$var wire 1 N slvx_req_o $end
+$var wire 32 1" slvx_data_o [31:0] $end
+$var wire 6 2" pkglen [5:0] $end
+$var wire 6 3" margin_o [5:0] $end
+$var wire 1 * chx_ready_o $end
+$var reg 1 R slvx_end_o $end
+$var reg 1 M slvx_val_o $end
+$var integer 32 4" i [31:0] $end
+$scope module FIFO1 $end
+$var wire 1 1 clk $end
+$var wire 32 5" data_in [31:0] $end
+$var wire 1 ," rd_en $end
+$var wire 1 -" rst_n $end
+$var wire 1 /" wr_en $end
+$var wire 6 6" wr_ptr_true [5:0] $end
+$var wire 1 7" wr_ptr_msb $end
+$var wire 6 8" rd_ptr_true [5:0] $end
+$var wire 1 9" rd_ptr_msb $end
+$var wire 1 :" full $end
+$var wire 1 ;" empty $end
+$var wire 6 <" FIFO_margin_o [5:0] $end
+$var reg 32 =" data_out [31:0] $end
+$var reg 7 >" rd_ptr [6:0] $end
+$var reg 7 ?" wr_ptr [6:0] $end
+$upscope $end
+$upscope $end
+$scope module slave1 $end
+$var wire 1 \ a2sx_ack_i $end
+$var wire 32 @" chx_data_i [31:0] $end
+$var wire 1 . chx_valid_i $end
+$var wire 1 1 clk_i $end
+$var wire 1 A" rd_en $end
+$var wire 1 B" rst_n $end
+$var wire 1 6 rstn_i $end
+$var wire 1 K slvx_en_i $end
+$var wire 3 C" slvx_pkglen_i [2:0] $end
+$var wire 1 D" wr_en $end
+$var wire 1 E" val_i $end
+$var wire 1 F slvx_req_o $end
+$var wire 32 F" slvx_data_o [31:0] $end
+$var wire 6 G" pkglen [5:0] $end
+$var wire 6 H" margin_o [5:0] $end
+$var wire 1 ) chx_ready_o $end
+$var reg 1 J slvx_end_o $end
+$var reg 1 E slvx_val_o $end
+$var integer 32 I" i [31:0] $end
+$scope module FIFO1 $end
+$var wire 1 1 clk $end
+$var wire 32 J" data_in [31:0] $end
+$var wire 1 A" rd_en $end
+$var wire 1 B" rst_n $end
+$var wire 1 D" wr_en $end
+$var wire 6 K" wr_ptr_true [5:0] $end
+$var wire 1 L" wr_ptr_msb $end
+$var wire 6 M" rd_ptr_true [5:0] $end
+$var wire 1 N" rd_ptr_msb $end
+$var wire 1 O" full $end
+$var wire 1 P" empty $end
+$var wire 6 Q" FIFO_margin_o [5:0] $end
+$var reg 32 R" data_out [31:0] $end
+$var reg 7 S" rd_ptr [6:0] $end
+$var reg 7 T" wr_ptr [6:0] $end
+$upscope $end
+$upscope $end
+$scope module slave2 $end
+$var wire 1 [ a2sx_ack_i $end
+$var wire 32 U" chx_data_i [31:0] $end
+$var wire 1 0 chx_valid_i $end
+$var wire 1 1 clk_i $end
+$var wire 1 V" rd_en $end
+$var wire 1 W" rst_n $end
+$var wire 1 6 rstn_i $end
+$var wire 1 C slvx_en_i $end
+$var wire 3 X" slvx_pkglen_i [2:0] $end
+$var wire 1 Y" wr_en $end
+$var wire 1 Z" val_i $end
+$var wire 1 > slvx_req_o $end
+$var wire 32 [" slvx_data_o [31:0] $end
+$var wire 6 \" pkglen [5:0] $end
+$var wire 6 ]" margin_o [5:0] $end
+$var wire 1 ( chx_ready_o $end
+$var reg 1 B slvx_end_o $end
+$var reg 1 = slvx_val_o $end
+$var integer 32 ^" i [31:0] $end
+$scope module FIFO1 $end
+$var wire 1 1 clk $end
+$var wire 32 _" data_in [31:0] $end
+$var wire 1 V" rd_en $end
+$var wire 1 W" rst_n $end
+$var wire 1 Y" wr_en $end
+$var wire 6 `" wr_ptr_true [5:0] $end
+$var wire 1 a" wr_ptr_msb $end
+$var wire 6 b" rd_ptr_true [5:0] $end
+$var wire 1 c" rd_ptr_msb $end
+$var wire 1 d" full $end
+$var wire 1 e" empty $end
+$var wire 6 f" FIFO_margin_o [5:0] $end
+$var reg 32 g" data_out [31:0] $end
+$var reg 7 h" rd_ptr [6:0] $end
+$var reg 7 i" wr_ptr [6:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 i"
+b0 h"
+bx g"
+b111111 f"
+1e"
+0d"
+0c"
+b0 b"
+0a"
+b0 `"
+bx _"
+b0 ^"
+b111111 ]"
+b100 \"
+bx ["
+0Z"
+xY"
+b0 X"
+0W"
+0V"
+bx U"
+b0 T"
+b0 S"
+bx R"
+b111111 Q"
+1P"
+0O"
+0N"
+b0 M"
+0L"
+b0 K"
+bx J"
+b0 I"
+b111111 H"
+b100 G"
+bx F"
+0E"
+xD"
+b0 C"
+0B"
+0A"
+bx @"
+b0 ?"
+b0 >"
+bx ="
+b111111 <"
+1;"
+0:"
+09"
+b0 8"
+07"
+b0 6"
+bx 5"
+b0 4"
+b111111 3"
+b100 2"
+bx 1"
+00"
+x/"
+b0 ."
+0-"
+0,"
+bx +"
+b100 *"
+0)"
+b0 ("
+b11 '"
+b0 &"
+b11 %"
+b0 $"
+b110 #"
+b0 ""
+b111111 !"
+b0 ~
+b11 }
+b111111 |
+b0 {
+b11 z
+b111111 y
+b0 x
+b11 w
+bx v
+bx u
+bx t
+b110 s
+b0 r
+b11 q
+b0 p
+b1100 o
+b1101 n
+b1110 m
+bx l
+b0 k
+b11 j
+bx i
+b0 h
+b11 g
+bx f
+b0 e
+b11 d
+b0 c
+b0 b
+0a
+b11 `
+b0 _
+0^
+0]
+0\
+0[
+b0 Z
+0Y
+1X
+b11 W
+b0 V
+b100 U
+bx T
+1S
+0R
+b111111 Q
+b0 P
+b11 O
+0N
+0M
+bx L
+1K
+0J
+b111111 I
+b0 H
+b11 G
+0F
+0E
+bx D
+1C
+0B
+b111111 A
+b0 @
+b11 ?
+0>
+0=
+bx <
+bx ;
+bx :
+bx 9
+bx 8
+bx 7
+06
+x5
+bx 4
+bx 3
+bx 2
+01
+x0
+bx /
+x.
+bx -
+x,
+bx +
+1*
+1)
+1(
+b0 '
+b11 &
+b0 %
+0$
+b100 #
+0"
+0!
+$end
+#100
+b110 #"
+11
+#200
+01
+#300
+b110 #"
+11
+#400
+01
+#500
+b110 #"
+11
+#600
+01
+#700
+b110 #"
+11
+#800
+01
+#900
+b110 #"
+11
+#1000
+01
+#1100
+b110 #"
+11
+#1200
+01
+#1300
+b110 #"
+11
+#1400
+01
+#1500
+b110 #"
+11
+#1600
+01
+#1700
+b110 #"
+11
+#1800
+01
+#1900
+b110 #"
+11
+#2000
+01
+#2100
+b110 #"
+11
+#2200
+01
+#2300
+b110 #"
+11
+#2400
+01
+#2500
+b110 #"
+11
+#2600
+01
+#2700
+b110 #"
+11
+#2800
+01
+#2900
+b110 #"
+11
+#3000
+01
+#3100
+b110 #"
+11
+#3200
+01
+#3300
+b110 #"
+11
+#3400
+01
+#3500
+b110 #"
+11
+#3600
+01
+#3700
+b110 #"
+11
+#3800
+01
+#3900
+b110 #"
+11
+#4000
+01
+#4100
+b110 #"
+11
+#4200
+01
+#4300
+b110 #"
+11
+#4400
+01
+#4500
+b110 #"
+11
+#4600
+01
+#4700
+b110 #"
+11
+#4800
+01
+#4900
+b110 #"
+11
+#5000
+01
+#5100
+b110 #"
+11
+#5200
+01
+#5300
+b110 #"
+11
+#5400
+01
+#5500
+b110 #"
+11
+#5600
+01
+#5700
+b110 #"
+11
+#5800
+01
+#5900
+b110 #"
+11
+#6000
+01
+#6100
+b110 #"
+11
+#6200
+01
+#6300
+b110 #"
+11
+#6400
+01
+#6500
+b110 #"
+11
+#6600
+01
+#6700
+b110 #"
+11
+#6800
+01
+#6900
+b110 #"
+11
+#7000
+01
+#7100
+b110 #"
+11
+#7200
+01
+#7300
+b110 #"
+11
+#7400
+01
+#7500
+b110 #"
+11
+#7600
+01
+#7700
+b110 #"
+11
+#7800
+01
+#7900
+b110 #"
+11
+#8000
+01
+#8100
+b110 #"
+11
+#8200
+01
+#8300
+b110 #"
+11
+#8400
+01
+#8500
+b110 #"
+11
+#8600
+01
+#8700
+b110 #"
+11
+#8800
+01
+#8900
+b110 #"
+11
+#9000
+01
+#9100
+b110 #"
+11
+#9200
+01
+#9300
+b110 #"
+11
+#9400
+01
+#9500
+b110 #"
+11
+#9600
+01
+#9700
+b110 #"
+11
+#9800
+01
+#9900
+b110 #"
+11
+#10000
+01
+#10100
+b110 #"
+11
+#10200
+01
+#10300
+b110 #"
+11
+#10400
+01
+#10500
+b110 #"
+11
+#10600
+01
+#10700
+b110 #"
+11
+#10800
+01
+#10900
+b110 #"
+11
+#11000
+01
+#11100
+b110 #"
+11
+#11200
+01
+#11300
+b110 #"
+11
+#11400
+01
+#11500
+b110 #"
+11
+#11600
+01
+#11700
+b110 #"
+11
+#11800
+01
+#11900
+b110 #"
+11
+#12000
+01
+#12100
+b110 #"
+11
+#12200
+01
+#12300
+b110 #"
+11
+#12400
+01
+#12500
+b110 #"
+11
+#12600
+01
+#12700
+b110 #"
+11
+#12800
+01
+#12900
+b110 #"
+11
+#13000
+01
+#13100
+b110 #"
+11
+#13200
+01
+#13300
+b110 #"
+11
+#13400
+01
+#13500
+b110 #"
+11
+#13600
+01
+#13700
+b110 #"
+11
+#13800
+01
+#13900
+b110 #"
+11
+#14000
+01
+#14100
+b110 #"
+11
+#14200
+01
+#14300
+b110 #"
+11
+#14400
+01
+#14500
+b110 #"
+11
+#14600
+01
+#14700
+b110 #"
+11
+#14800
+01
+#14900
+b110 #"
+11
+#15000
+01
+#15100
+b110 #"
+11
+#15200
+01
+#15300
+b110 #"
+11
+#15400
+01
+#15500
+b110 #"
+11
+#15600
+01
+#15700
+b110 #"
+11
+#15800
+01
+#15900
+b110 #"
+11
+#16000
+01
+#16100
+b110 #"
+11
+#16200
+01
+#16300
+b110 #"
+11
+#16400
+01
+#16500
+b110 #"
+11
+#16600
+01
+#16700
+b110 #"
+11
+#16800
+01
+#16900
+b110 #"
+11
+#17000
+01
+#17100
+b110 #"
+11
+#17200
+01
+#17300
+b110 #"
+11
+#17400
+01
+#17500
+b110 #"
+11
+#17600
+01
+#17700
+b110 #"
+11
+#17800
+01
+#17900
+b110 #"
+11
+#18000
+01
+#18100
+b110 #"
+11
+#18200
+01
+#18300
+b110 #"
+11
+#18400
+01
+#18500
+b110 #"
+11
+#18600
+01
+#18700
+b110 #"
+11
+#18800
+01
+#18900
+b110 #"
+11
+#19000
+01
+#19100
+b110 #"
+11
+#19200
+01
+#19300
+b110 #"
+11
+#19400
+01
+#19500
+b110 #"
+11
+#19600
+01
+#19700
+b110 #"
+11
+#19800
+01
+#19900
+b110 #"
+11
+#20000
+01
