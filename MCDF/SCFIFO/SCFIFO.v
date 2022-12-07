@@ -38,8 +38,11 @@ assign {rd_ptr_msb,rd_ptr_true} = rd_ptr;						//将最高位与其他位拼接
 assign FIFO_margin_o=(~empty)?('d64-(wr_ptr-rd_ptr)):'b11_1111;
 //读操作,更新读地址
 always @ (posedge clk or negedge rst_n) begin
-	if (rst_n == 1'b0)
+	if (rst_n == 1'b0)begin
 		rd_ptr <= 'd0;//读地址清零
+		fifo_buffer[0]<=0;//清空首地址数据
+		data_out<=0;
+	end
 	else if (rd_en && !empty)begin								//读使能有效且非空
 		data_out <= fifo_buffer[rd_ptr_true];
 		rd_ptr <= rd_ptr + 1'd1;

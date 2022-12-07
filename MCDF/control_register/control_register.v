@@ -5,7 +5,7 @@
 module control_register
 #(
     parameter   CTRL_REG_DEFAULT='b111,
-                STATE_REG_DEFAULT='d64 //FIFO深度
+                STATE_REG_DEFAULT=32'd63//FIFO深度63
               
 )
 (
@@ -39,7 +39,7 @@ always @(posedge clk_i or negedge rstn_i) begin
         for(i=0;i<3;i=i+1)begin
             Register[i]<=CTRL_REG_DEFAULT;
         end
-        for(i=4;i<6;i=i+1)begin
+        for(i=3;i<6;i=i+1)begin
             Register[i]<=STATE_REG_DEFAULT;
         end
         cmd_data_o<='d0;//!!!不加这句不给综合
@@ -52,10 +52,10 @@ always @(posedge clk_i or negedge rstn_i) begin
             default: //IDLE
                 ;//不做任何操作但是要加上，防止综合出锁存器
         endcase
-        //!!!锁存更新通道余量,不是实时的，会延迟一个始终
-        Register[3][5:3]<=slv0_margin_i;
-        Register[4][5:3]<=slv1_margin_i;
-        Register[5][5:3]<=slv2_margin_i;        
+        //!!!锁存更新通道余量,不是实时的，会延迟一个时钟
+        Register[3][5:0]<=slv0_margin_i;
+        Register[4][5:0]<=slv1_margin_i;
+        Register[5][5:0]<=slv2_margin_i;        
     end
 end
 /*************************<组合逻辑电路>*********************/

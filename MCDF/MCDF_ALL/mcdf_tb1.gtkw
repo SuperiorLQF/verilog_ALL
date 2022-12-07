@@ -1,0 +1,79 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Wed Dec  7 12:12:44 2022
+[*]
+[dumpfile] "/home/lqf/桌面/Verilog_ALL/verilog_ALL/MCDF/MCDF_ALL/MCDF_tb1.vcd"
+[dumpfile_mtime] "Wed Dec  7 12:12:10 2022"
+[dumpfile_size] 87630
+[savefile] "/home/lqf/桌面/Verilog_ALL/verilog_ALL/MCDF/MCDF_ALL/mcdf_tb1.gtkw"
+[timestart] 0
+[size] 1846 1016
+[pos] -1 -1
+*-17.000000 550000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] MCDF_tb1.
+[treeopen] MCDF_tb1.MCDF_inst0.
+[treeopen] MCDF_tb1.MCDF_inst0.slave0.
+[treeopen] MCDF_tb1.MCDF_inst0.slave1.
+[sst_width] 233
+[signals_width] 174
+[sst_expanded] 1
+[sst_vpaned_height] 289
+@28
+[color] 2
+MCDF_tb1.clk
+MCDF_tb1.rst_n
+MCDF_tb1.cmd[1:0]
+@22
+MCDF_tb1.cmd_addr[5:0]
+MCDF_tb1.cmd_data_i[31:0]
+MCDF_tb1.cmd_data_o[31:0]
+@24
+MCDF_tb1.MCDF_inst0.slv0_margin[5:0]
+MCDF_tb1.MCDF_inst0.slv1_margin[5:0]
+MCDF_tb1.MCDF_inst0.slv2_margin[5:0]
+@28
+MCDF_tb1.MCDF_inst0.cr0.slv0_prio_o[1:0]
+MCDF_tb1.MCDF_inst0.cr0.slv0_pkglen_o[2:0]
+MCDF_tb1.MCDF_inst0.cr0.slv1_prio_o[1:0]
+MCDF_tb1.MCDF_inst0.cr0.slv1_pkglen_o[2:0]
+MCDF_tb1.MCDF_inst0.cr0.slv2_pkglen_o[2:0]
+MCDF_tb1.MCDF_inst0.cr0.slv2_prio_o[1:0]
+[color] 2
+MCDF_tb1.clk
+MCDF_tb1.ch0_valid
+MCDF_tb1.ch1_valid
+MCDF_tb1.ch2_valid
+@22
+MCDF_tb1.MCDF_inst0.ch0_data[31:0]
+MCDF_tb1.MCDF_inst0.ch1_data[31:0]
+MCDF_tb1.MCDF_inst0.ch2_data[31:0]
+@28
+[color] 3
+MCDF_tb1.MCDF_inst0.slv0_req
+[color] 3
+MCDF_tb1.MCDF_inst0.slv1_req
+[color] 3
+MCDF_tb1.MCDF_inst0.slv2_req
+[color] 2
+MCDF_tb1.clk
+MCDF_tb1.fmt_child[1:0]
+@22
+MCDF_tb1.fmt_length[5:0]
+@29
+MCDF_tb1.MCDF_inst0.f2a_id_req
+@28
+[color] 3
+MCDF_tb1.MCDF_inst0.fmt_req
+[color] 3
+MCDF_tb1.fmt_grant
+MCDF_tb1.MCDF_inst0.f2a_ack
+[color] 2
+MCDF_tb1.fmt_start
+@22
+[color] 4
+MCDF_tb1.fmt_data[31:0]
+@28
+[color] 2
+MCDF_tb1.fmt_end
+[pattern_trace] 1
+[pattern_trace] 0

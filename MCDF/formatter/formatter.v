@@ -28,8 +28,15 @@ module formatter
 );
 /***************<中间信号>*********************/
 reg fmt_end_d1;//end信号时延一个周期
-
+reg fmt_id_req_o_d1;//fmt_id_req_o信号延迟一个周期,用于波形变换，使得fmt_req上升沿延后
 /***************<时序电路>*********************/
+//fmt_id_req_o信号延迟一个周期
+always @(posedge clk_i or negedge rstn_i) begin
+    if(~rstn_i)
+        fmt_id_req_o_d1<=0;
+    else
+        fmt_id_req_o_d1<=fmt_id_req_o;
+end
 // >>>fmt_end_d1用于产生fmt_id_req_o,并保证两次发送之间的时隙
 //end信号时延一个周期
 always @(posedge clk_i or negedge rstn_i) begin
@@ -64,7 +71,7 @@ end
 // >>>fmt_req_o<<<
 //等待优先通道不为11，产生 fmt_req_o,表示下级就绪,当出现 fmt_grant_i 时再置低
 //采用 波形变换 方式实现 优先通道不为11&fmt_id_req_o,参考时序参考图
-assign  fmt_req_o=fmt_id_req_o & (a2f_id_i!=2'b11);
+assign  fmt_req_o=fmt_id_req_o & (a2f_id_i!=2'b11) & fmt_id_req_o_d1;
 //波形变换，ack信号，在通道联通后，直送给slave
 assign  f2a_ack_o=fmt_grant_i & fmt_req_o;
 //一些直连信号
