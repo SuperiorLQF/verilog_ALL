@@ -1,0 +1,57 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Wed Dec  7 06:49:51 2022
+[*]
+[dumpfile] "/home/lqf/桌面/Verilog_ALL/verilog_ALL/MCDF/formatter/formatter.vcd"
+[dumpfile_mtime] "Wed Dec  7 05:15:39 2022"
+[dumpfile_size] 7062
+[savefile] "/home/lqf/桌面/Verilog_ALL/verilog_ALL/MCDF/formatter/formatter.gtkw"
+[timestart] 0
+[size] 1000 600
+[pos] -235 146
+*-17.000000 235200 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 233
+[signals_width] 198
+[sst_expanded] 1
+[sst_vpaned_height] 144
+@28
+formatter_tb.clk_i
+formatter_tb.rstn_i
+formatter_tb.a2f_id_i[1:0]
+@22
+formatter_tb.a2f_data_i[31:0]
+@28
+formatter_tb.a2f_pkglen_sel_i[2:0]
+formatter_tb.fmt_end_o
+[color] 2
+formatter_tb.fmt_id_req_o
+[color] 2
+formatter_tb.fmt_child_o[1:0]
+@c00022
+[color] 2
+formatter_tb.fmt_length_o[5:0]
+@28
+(0)formatter_tb.fmt_length_o[5:0]
+(1)formatter_tb.fmt_length_o[5:0]
+(2)formatter_tb.fmt_length_o[5:0]
+(3)formatter_tb.fmt_length_o[5:0]
+(4)formatter_tb.fmt_length_o[5:0]
+(5)formatter_tb.fmt_length_o[5:0]
+@1401200
+-group_end
+@28
+[color] 3
+formatter_tb.fmt_req_o
+formatter_tb.fmt_grant_i
+[color] 3
+formatter_tb.fmt_start_o
+@22
+formatter_tb.fmt_data_o[31:0]
+@28
+[color] 3
+formatter_tb.fmt_end_o
+@29
+[color] 3
+formatter_tb.f2a_ack_o
+[pattern_trace] 1
+[pattern_trace] 0
