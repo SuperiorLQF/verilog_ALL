@@ -11,14 +11,20 @@ reg     adat1,
         bdat1,  bdat2,  bdat3,
         abdat1, abdat2;
 //实例化慢时钟域同步器
-always @(posedge bclk) begin
-    {bdat2,bdat1}<={bdat1,adat1};
+always @(posedge bclk or negedge rst) begin
+    if(~rst)
+        {bdat2,bdat1}<=2'b00;
+    else
+        {bdat2,bdat1}<={bdat1,adat1};
 end
 //实例化快时钟域同步器
-always @(posedge aclk) begin
-    {abdat2,abdat1}<={abdat1,bdat2};
+always @(posedge aclk or negedge rst) begin
+    if(~rst)
+        {abdat2,abdat1}<=2'b00;
+    else
+        {abdat2,abdat1}<={abdat1,bdat2};
 end
-//实例化快时钟域同步慢时钟域方法：缩短
+//实例化快时钟域同步慢时钟域方法:缩短
 always @(posedge bclk or negedge rst) begin
     if(~rst)
         bdat3<=1'b0;
@@ -28,7 +34,6 @@ end
 always @(bdat3,bdat2) begin
     bdat<=({bdat3,bdat2}==2'b01)?1'b1:1'b0;
 end
-
 
 //实例化慢时钟域同步快时钟域方法：反馈延时
 always @(posedge aclk or negedge rst) begin

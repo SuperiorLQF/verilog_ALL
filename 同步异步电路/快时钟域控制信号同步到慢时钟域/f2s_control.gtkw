@@ -1,0 +1,35 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Mon Feb 06 08:32:08 2023
+[*]
+[dumpfile] "C:\verilog_ALL\verilog_ALL\同步异步电路\快时钟域控制信号同步到慢时钟域\f2s_control.vcd"
+[dumpfile_mtime] "Mon Feb 06 08:26:08 2023"
+[dumpfile_size] 3240
+[savefile] "C:\verilog_ALL\verilog_ALL\同步异步电路\快时钟域控制信号同步到慢时钟域\f2s_control.gtkw"
+[timestart] 0
+[size] 1280 649
+[pos] -1 -1
+*-6.000000 201 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] f2s_control_tb.
+[sst_width] 197
+[signals_width] 78
+[sst_expanded] 1
+[sst_vpaned_height] 170
+@28
+[color] 2
+f2s_control_tb.aclk
+[color] 7
+f2s_control_tb.bclk
+f2s_control_tb.rst
+[color] 3
+f2s_control_tb.adat
+f2s_control_tb.M1.adat1
+f2s_control_tb.M1.bdat1
+f2s_control_tb.M1.bdat2
+f2s_control_tb.M1.bdat3
+[color] 3
+f2s_control_tb.bdat
+f2s_control_tb.M1.abdat1
+f2s_control_tb.M1.abdat2
+[pattern_trace] 1
+[pattern_trace] 0
