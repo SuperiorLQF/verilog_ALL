@@ -1,0 +1,35 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Fri Jan 06 03:36:26 2023
+[*]
+[dumpfile] "C:\verilog_ALL\verilog_ALL\MCDF\control_register\control_register.vcd"
+[dumpfile_mtime] "Fri Jan 06 03:28:04 2023"
+[dumpfile_size] 3036
+[savefile] "C:\verilog_ALL\verilog_ALL\MCDF\control_register\testwave1.gtkw"
+[timestart] 0
+[size] 1280 649
+[pos] -61 -42
+*-16.134325 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] control_register_tb.
+[sst_width] 197
+[signals_width] 174
+[sst_expanded] 1
+[sst_vpaned_height] 170
+@28
+[color] 3
+control_register_tb.clk_i
+@22
+control_register_tb.cmd_addr_i[5:0]
+control_register_tb.cmd_data_i[31:0]
+control_register_tb.cmd_data_o[31:0]
+@28
+control_register_tb.cmd_i[1:0]
+@29
+[color] 2
+control_register_tb.rstn_i
+@28
+control_register_tb.slv0_en_o
+@22
+control_register_tb.slv0_margin_i[5:0]
+[pattern_trace] 1
+[pattern_trace] 0

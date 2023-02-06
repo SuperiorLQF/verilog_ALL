@@ -1,0 +1,131 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_00000171e40e6c50 .scope module, "f2s_control" "f2s_control" 2 3;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "adat";
+    .port_info 1 /INPUT 1 "rst";
+    .port_info 2 /INPUT 1 "aclk";
+    .port_info 3 /INPUT 1 "bclk";
+    .port_info 4 /OUTPUT 1 "bdat";
+v00000171e40e6de0_0 .var "abdat1", 0 0;
+v00000171e40e6e80_0 .var "abdat2", 0 0;
+o00000171e3fe8008 .functor BUFZ 1, C4<z>; HiZ drive
+v00000171e40e6f20_0 .net "aclk", 0 0, o00000171e3fe8008;  0 drivers
+o00000171e3fe8038 .functor BUFZ 1, C4<z>; HiZ drive
+v00000171e40ebe10_0 .net "adat", 0 0, o00000171e3fe8038;  0 drivers
+v00000171e40ebeb0_0 .var "adat1", 0 0;
+o00000171e3fe8098 .functor BUFZ 1, C4<z>; HiZ drive
+v00000171e3fe3e10_0 .net "bclk", 0 0, o00000171e3fe8098;  0 drivers
+v00000171e3fe3eb0_0 .var "bdat", 0 0;
+v00000171e3fe3f50_0 .var "bdat1", 0 0;
+v00000171e3fe3ff0_0 .var "bdat2", 0 0;
+v00000171e4028c50_0 .var "bdat3", 0 0;
+o00000171e3fe8188 .functor BUFZ 1, C4<z>; HiZ drive
+v00000171e4029150_0 .net "rst", 0 0, o00000171e3fe8188;  0 drivers
+E_00000171e40ecd40/0 .event negedge, v00000171e4029150_0;
+E_00000171e40ecd40/1 .event posedge, v00000171e40e6f20_0;
+E_00000171e40ecd40 .event/or E_00000171e40ecd40/0, E_00000171e40ecd40/1;
+E_00000171e40ecbc0 .event anyedge, v00000171e3fe3ff0_0, v00000171e4028c50_0;
+E_00000171e40ecc80/0 .event negedge, v00000171e4029150_0;
+E_00000171e40ecc80/1 .event posedge, v00000171e3fe3e10_0;
+E_00000171e40ecc80 .event/or E_00000171e40ecc80/0, E_00000171e40ecc80/1;
+E_00000171e40ecf40 .event posedge, v00000171e40e6f20_0;
+E_00000171e40ed040 .event posedge, v00000171e3fe3e10_0;
+    .scope S_00000171e40e6c50;
+T_0 ;
+    %wait E_00000171e40ed040;
+    %load/vec4 v00000171e3fe3f50_0;
+    %load/vec4 v00000171e40ebeb0_0;
+    %concat/vec4; draw_concat_vec4
+    %split/vec4 1;
+    %assign/vec4 v00000171e3fe3f50_0, 0;
+    %assign/vec4 v00000171e3fe3ff0_0, 0;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_00000171e40e6c50;
+T_1 ;
+    %wait E_00000171e40ecf40;
+    %load/vec4 v00000171e40e6de0_0;
+    %load/vec4 v00000171e3fe3ff0_0;
+    %concat/vec4; draw_concat_vec4
+    %split/vec4 1;
+    %assign/vec4 v00000171e40e6de0_0, 0;
+    %assign/vec4 v00000171e40e6e80_0, 0;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_00000171e40e6c50;
+T_2 ;
+    %wait E_00000171e40ecc80;
+    %load/vec4 v00000171e4029150_0;
+    %inv;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_2.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v00000171e4028c50_0, 0;
+    %jmp T_2.1;
+T_2.0 ;
+    %load/vec4 v00000171e3fe3ff0_0;
+    %assign/vec4 v00000171e4028c50_0, 0;
+T_2.1 ;
+    %jmp T_2;
+    .thread T_2;
+    .scope S_00000171e40e6c50;
+T_3 ;
+    %wait E_00000171e40ecbc0;
+    %load/vec4 v00000171e4028c50_0;
+    %load/vec4 v00000171e3fe3ff0_0;
+    %concat/vec4; draw_concat_vec4
+    %cmpi/e 1, 0, 2;
+    %flag_mov 8, 4;
+    %jmp/0 T_3.0, 8;
+    %pushi/vec4 1, 0, 1;
+    %jmp/1 T_3.1, 8;
+T_3.0 ; End of true expr.
+    %pushi/vec4 0, 0, 1;
+    %jmp/0 T_3.1, 8;
+ ; End of false expr.
+    %blend;
+T_3.1;
+    %assign/vec4 v00000171e3fe3eb0_0, 0;
+    %jmp T_3;
+    .thread T_3, $push;
+    .scope S_00000171e40e6c50;
+T_4 ;
+    %wait E_00000171e40ecd40;
+    %load/vec4 v00000171e4029150_0;
+    %inv;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_4.0, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v00000171e40ebeb0_0, 0;
+    %jmp T_4.1;
+T_4.0 ;
+    %load/vec4 v00000171e40e6e80_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_4.2, 8;
+    %pushi/vec4 0, 0, 1;
+    %assign/vec4 v00000171e40ebeb0_0, 0;
+    %jmp T_4.3;
+T_4.2 ;
+    %load/vec4 v00000171e40ebe10_0;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_4.4, 8;
+    %pushi/vec4 1, 0, 1;
+    %assign/vec4 v00000171e40ebeb0_0, 0;
+T_4.4 ;
+T_4.3 ;
+T_4.1 ;
+    %jmp T_4;
+    .thread T_4;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "f2s_control.v";
