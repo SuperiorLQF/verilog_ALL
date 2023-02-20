@@ -1,0 +1,62 @@
+#! /c/Source/iverilog-install/bin/vvp
+:ivl_version "12.0 (devel)" "(s20150603-1539-g2693dd32b)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision + 0;
+:vpi_module "C:\iverilog\lib\ivl\system.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_sys.vpi";
+:vpi_module "C:\iverilog\lib\ivl\vhdl_textio.vpi";
+:vpi_module "C:\iverilog\lib\ivl\v2005_math.vpi";
+:vpi_module "C:\iverilog\lib\ivl\va_math.vpi";
+S_0000020106ae6c40 .scope module, "gray_inc" "gray_inc" 2 3;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "rst_n";
+    .port_info 2 /OUTPUT 4 "gray";
+P_0000020106ae7270 .param/l "INC" 0 2 6, +C4<00000000000000000000000000000001>;
+P_0000020106ae72a8 .param/l "SIZE" 0 2 5, +C4<00000000000000000000000000000100>;
+v0000020106ae7120_0 .var "bin", 3 0;
+o0000020106b36fc8 .functor BUFZ 1, C4<z>; HiZ drive
+v0000020106ae7470_0 .net "clk", 0 0, o0000020106b36fc8;  0 drivers
+v0000020106aee2d0_0 .var "gray", 3 0;
+o0000020106b37028 .functor BUFZ 1, C4<z>; HiZ drive
+v0000020106ae6dd0_0 .net "rst_n", 0 0, o0000020106b37028;  0 drivers
+E_0000020106b36800 .event anyedge, v0000020106ae7120_0;
+E_0000020106b35e00/0 .event negedge, v0000020106ae6dd0_0;
+E_0000020106b35e00/1 .event posedge, v0000020106ae7470_0;
+E_0000020106b35e00 .event/or E_0000020106b35e00/0, E_0000020106b35e00/1;
+    .scope S_0000020106ae6c40;
+T_0 ;
+    %wait E_0000020106b35e00;
+    %load/vec4 v0000020106ae6dd0_0;
+    %inv;
+    %flag_set/vec4 8;
+    %jmp/0xz  T_0.0, 8;
+    %pushi/vec4 0, 0, 4;
+    %assign/vec4 v0000020106ae7120_0, 0;
+    %jmp T_0.1;
+T_0.0 ;
+    %load/vec4 v0000020106ae7120_0;
+    %pad/u 32;
+    %addi 1, 0, 32;
+    %pad/u 4;
+    %assign/vec4 v0000020106ae7120_0, 0;
+T_0.1 ;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0000020106ae6c40;
+T_1 ;
+    %wait E_0000020106b36800;
+    %load/vec4 v0000020106ae7120_0;
+    %ix/load 4, 1, 0;
+    %flag_set/imm 4, 0;
+    %shiftr 4;
+    %load/vec4 v0000020106ae7120_0;
+    %xor;
+    %assign/vec4 v0000020106aee2d0_0, 0;
+    %jmp T_1;
+    .thread T_1, $push;
+# The file index is used to find the file name in the following table.
+:file_names 3;
+    "N/A";
+    "<interactive>";
+    "gray_inc.v";

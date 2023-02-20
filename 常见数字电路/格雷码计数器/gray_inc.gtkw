@@ -1,0 +1,24 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Mon Feb 20 12:39:38 2023
+[*]
+[dumpfile] "C:\verilog_ALL\verilog_ALL\常见数字电路\格雷码计数器\gray_inc.vcd"
+[dumpfile_mtime] "Mon Feb 20 12:28:55 2023"
+[dumpfile_size] 3115
+[savefile] "C:\verilog_ALL\verilog_ALL\常见数字电路\格雷码计数器\gray_inc.gtkw"
+[timestart] 0
+[size] 1280 649
+[pos] -87 -42
+*-16.000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 197
+[signals_width] 102
+[sst_expanded] 1
+[sst_vpaned_height] 170
+@29
+gray_inc_tb.clk
+@28
+gray_inc_tb.rst_n
+[color] 2
+gray_inc_tb.gray[4:0]
+[pattern_trace] 1
+[pattern_trace] 0
