@@ -34,7 +34,7 @@ always@(*)begin
             next_state=S1;
     endcase
 end
-//第三段:输出电路（可以是组合或者时序，根据mealy或者moore确定）
+//第三段:输出电路（可以是组合或者时序，根据mealy或者moore确定，时序电路可以避免输出随输入变化的毛刺，但是会比mealy慢一个时钟）
 always@(*)begin
     o_pulse=(current_state==S2);
 end
