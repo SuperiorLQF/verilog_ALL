@@ -1,0 +1,27 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Thu Feb 23 12:36:56 2023
+[*]
+[dumpfile] "/home/superior/GIT_CODE/verilog_ALL/常见数字电路/上升沿检测（FSM3段式）/posedge_detect.vcd"
+[dumpfile_mtime] "Thu Feb 23 12:35:09 2023"
+[dumpfile_size] 1790
+[savefile] "/home/superior/GIT_CODE/verilog_ALL/常见数字电路/上升沿检测（FSM3段式）/posedge_detect.gtkw"
+[timestart] 0
+[size] 1846 1016
+[pos] -1 -1
+*-16.000000 108100 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[sst_width] 233
+[signals_width] 86
+[sst_expanded] 1
+[sst_vpaned_height] 289
+@28
+posedge_detect_tb.clk
+posedge_detect_tb.rst_n
+@29
+[color] 2
+posedge_detect_tb.i_pulse
+@28
+[color] 3
+posedge_detect_tb.o_pulse
+[pattern_trace] 1
+[pattern_trace] 0
