@@ -1,0 +1,29 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Thu Feb 23 03:15:56 2023
+[*]
+[dumpfile] "C:\verilog_ALL\verilog_ALL\常见数字电路\十进制计数器\cnt10.vcd"
+[dumpfile_mtime] "Thu Feb 23 03:14:50 2023"
+[dumpfile_size] 3034
+[savefile] "C:\verilog_ALL\verilog_ALL\常见数字电路\十进制计数器\cnt10.gtkw"
+[timestart] 0
+[size] 1280 649
+[pos] -113 -42
+*-17.000000 537300 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] cnt10_tb.
+[sst_width] 197
+[signals_width] 94
+[sst_expanded] 1
+[sst_vpaned_height] 170
+@28
+cnt10_tb.clk
+cnt10_tb.clr
+cnt10_tb.en
+@22
+[color] 3
+cnt10_tb.out[3:0]
+@29
+[color] 2
+cnt10_tb.c
+[pattern_trace] 1
+[pattern_trace] 0
