@@ -1,0 +1,34 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Fri Feb 24 08:55:32 2023
+[*]
+[dumpfile] "C:\verilog_ALL\verilog_ALL\常见数字电路\按键控灯(上升沿检测)\button_light.vcd"
+[dumpfile_mtime] "Fri Feb 24 08:50:56 2023"
+[dumpfile_size] 2899
+[savefile] "C:\verilog_ALL\verilog_ALL\常见数字电路\按键控灯(上升沿检测)\button_light.gtkw"
+[timestart] 0
+[size] 1280 649
+[pos] -1 -1
+*-18.000000 619000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] button_light_tb.
+[sst_width] 197
+[signals_width] 102
+[sst_expanded] 1
+[sst_vpaned_height] 170
+@28
+button_light_tb.b1.clk
+button_light_tb.b1.button
+@29
+[color] 4
+button_light_tb.b1.button_d1
+[color] 4
+button_light_tb.b1.button_d2
+[color] 4
+button_light_tb.b1.button_d3
+@28
+[color] 2
+button_light_tb.b1.pulse
+[color] 3
+button_light_tb.b1.light
+[pattern_trace] 1
+[pattern_trace] 0
