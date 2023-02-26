@@ -1,3 +1,5 @@
+//按键控灯练习，见https://blog.csdn.net/SuperiorEE/article/details/128880282
+//波形变换法
 module button_light
 (
     input       clk     ,
@@ -12,7 +14,7 @@ wire    pulse       ;
 /*同步器，用于同步输入，避免亚稳态*/
 always @(posedge clk or negedge rst_n) begin
     if(~rst_n)
-        {button_d3,button_d2,button_d1}<=2'b00;
+        {button_d3,button_d2,button_d1}<=3'b00;
     else
         {button_d3,button_d2,button_d1}<={button_d2,button_d1,button};
 end
