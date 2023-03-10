@@ -14,7 +14,7 @@ input enable,
 output reg tx_out);
 
 localparam IDLE = 3'b000;
-localparam S1 	 = 3'b001;
+localparam S1 	 = 3'b001;//发送低电平
 localparam S2	 = 3'b010;
 localparam S3 	 = 3'b011;
 localparam S4   = 3'b100;
