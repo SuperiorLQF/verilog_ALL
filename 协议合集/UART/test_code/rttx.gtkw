@@ -1,0 +1,34 @@
+[*]
+[*] GTKWave Analyzer v3.3.100 (w)1999-2019 BSI
+[*] Sat Mar 11 03:26:17 2023
+[*]
+[dumpfile] "C:\verilog_ALL\verilog_ALL\协议合集\UART\test_code\rttx.vcd"
+[dumpfile_mtime] "Sat Mar 11 03:19:16 2023"
+[dumpfile_size] 36453
+[savefile] "C:\verilog_ALL\verilog_ALL\协议合集\UART\test_code\rttx.gtkw"
+[timestart] 3823000
+[size] 1280 649
+[pos] -35 -35
+*-19.000000 3945000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] rxtx_tb.
+[sst_width] 197
+[signals_width] 158
+[sst_expanded] 1
+[sst_vpaned_height] 170
+@28
+rxtx_tb.rx_clk
+rxtx_tb.tx_clk
+rxtx_tb.enable
+rxtx_tb.rst_n
+rxtx_tb.data_source[7:0]
+rxtx_tb.rv1.state[2:0]
+@22
+rxtx_tb.rv1.count_data[3:0]
+@29
+rxtx_tb.rv1.filter_out
+@28
+rxtx_tb.rv1.rx_out_reg[7:0]
+@22
+rxtx_tb.rx_out[7:0]
+[pattern_trace] 1
+[pattern_trace] 0
