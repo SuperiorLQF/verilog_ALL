@@ -3,7 +3,9 @@
 module baud_generator #(
 	parameter clk_rate = 100_000_000, //全局时钟频率100M
 	parameter baud_rate = 9_600 //波特率
-)(input clk,
+)(
+	input clk_p,
+	input clk_n,
 	input rst_n,
 	output rx_clk,
 	output tx_clk);
@@ -14,7 +16,12 @@ module baud_generator #(
 	//***设置最节约的计数寄存器的方法----------------------------------------------------
 	/*$clog2是向上取整，例如rx_rate只要介于[513,1024]，结果都是10，位宽就是[9:0],表示0-1023的值
 	由于1024比1023大，因此还要进行-1调整-------------------------------------------------*/
-	
+	wire clk;
+	IBUFGDS clk_inst (
+    .O(clk),
+    .I(clk_p),
+    .IB(clk_n)
+    );
 	reg [$clog2(rx_rate)-1:0] rx_count; 
 	reg [$clog2(tx_rate)-1:0] tx_count;
 	reg rx_clk_reg;
