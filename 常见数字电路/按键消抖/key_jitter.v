@@ -1,6 +1,7 @@
 module key_jitter(
     input diff_clock_clk_p,
     input diff_clock_clk_n,
+//    input clk_i,
     input rst_n_i,
     input key_i,
     output [3:0] led_o
