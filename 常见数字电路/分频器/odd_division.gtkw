@@ -1,0 +1,27 @@
+[*]
+[*] GTKWave Analyzer v3.3.104 (w)1999-2020 BSI
+[*] Wed Mar 22 16:35:06 2023
+[*]
+[dumpfile] "/home/superior/GIT_CODE/verilog_ALL/常见数字电路/分频器/odd_division.vcd"
+[dumpfile_mtime] "Wed Mar 22 16:34:31 2023"
+[dumpfile_size] 4042
+[savefile] "/home/superior/GIT_CODE/verilog_ALL/常见数字电路/分频器/odd_division.gtkw"
+[timestart] 0
+[size] 1143 600
+[pos] 73 35
+*-16.000000 0 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] odd_division_tb.
+[sst_width] 233
+[signals_width] 161
+[sst_expanded] 1
+[sst_vpaned_height] 144
+@28
+odd_division_tb.od1.clk_i
+odd_division_tb.od1.clk_division
+@22
+odd_division_tb.od1.pos_cnt[9:0]
+odd_division_tb.od1.neg_cnt[9:0]
+@29
+odd_division_tb.od1.rst_n
+[pattern_trace] 1
+[pattern_trace] 0
