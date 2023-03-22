@@ -59,7 +59,7 @@ module proc
 		end
 
 		2'b01:begin
-			case(I):
+			case(I)
 				2'b00:begin
 					{Rout,Rin,Done}={Y,X,1'b1};
 				end
@@ -79,7 +79,7 @@ module proc
 		end
 
 		2'b10:begin
-			case(I):
+			case(I)
 				2'b00:begin
 					//
 				end
@@ -100,7 +100,7 @@ module proc
 		end
 
 		2'b11:begin
-			case(I):
+			case(I)
 				2'b00:begin
 					//
 				end
